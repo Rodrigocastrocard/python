@@ -1,0 +1,94 @@
+#Calcular area.
+print('Primeiro vamos calcular a area de um determinado terreno!\n'
+      'ele deve ser um quadrado, retangulo ou triangulo. \n'
+      'Postriomente vamos calcular a quantidade de material que vai ser gasto. ')
+#Tipo de area
+tipo = input ('Para um quadrado digite 1 \n'
+              'Para um retangulo digite 2\n'
+       'Para um triangulo, digite 3 ')
+#Tipo de material
+tipo2 = (input('Agora diga qual tipo de material precisa: \n 1 para piso \n 2 para tinta'))
+
+#quadrado
+if tipo =='1':
+    lado1 = float(input('Digite o primeiro lado. '))
+    lado2 = float(input('Digite o segundo lado. '))
+    resultadoq = (lado1*lado2)
+    print('A area total é', resultadoq)
+    if tipo2 == '1':
+        caixa = float(input('Qauntos metros quadrados vem na caixa de pisos desejada ? '))
+        quanticaixa = resultadoq // caixa
+        if resultadoq % caixa > 0:
+            quanticaixa = quanticaixa + 1
+            print ('Você vai precisar de' , quanticaixa , 'caixas de piso.')
+            precocaixa = float(input('Qaul o peço unitario da caixa de pisos ? '))
+            print ('O valor total para compar as ' , quanticaixa , 'caixas, é de' ,quanticaixa*precocaixa , 'reais.')
+        else:
+            print ( 'Você vai precisar de' , quanticaixa, 'caixas de piso')
+
+    if tipo2 == '2':
+        lata = float(input('Qauntos metros quadrados a tinta desejada cobre ? '))
+        quantilata = resultadoq // lata
+        if resultadoq % lata > 0:
+            quantilata = quantilata + 1
+            print ('Você vai precisar de' , quantilata , 'latas de tinta.')
+            precolata = float(input('Qaul o peço unitario da lata de tinta ? '))
+            print ('O valor total para compar as ' , quantilata , 'latas, é de' ,quantilata*precolata , 'reais.')
+        else:
+            print ('Você vai precisar de', quantilata, 'latas de tinta')
+#Retangulo
+elif tipo == '2':
+    lado1 = float(input('Digite o primeiro lado. '))
+    lado2 = float(input('Digite o segundo lado. '))
+    resultador = (lado1 * lado2)
+    print('A area total é', resultador)
+    if tipo2 == '1':
+        caixa = float(input('Qauntos metros quadrados vem na caixa de pisos desejada ? '))
+        quanticaixa = resultador // caixa
+        if resultador % caixa > 0:
+            quanticaixa = quanticaixa + 1
+            print ('Você vai precisar de' , quanticaixa , 'caixas de piso.')
+            precocaixa = float(input('Qaul o peço unitario da caixa de pisos ? '))
+            print ('O valor total para compar as ' , quanticaixa , 'caixas, é de' ,quanticaixa*precocaixa , 'reais.')
+        else:
+            print('Você vai precisar de', quanticaixa, 'caixas de piso')
+    if tipo2 == '2':
+        lata = float(input('Qauntos metros quadrados a tinta desejada cobre ? '))
+        quantilata = resultador // lata
+        if resultador % lata > 0:
+            quantilata = quantilata + 1
+            print ('Você vai precisar de' , quantilata , 'latas de tinta.')
+            precolata = float(input('Qaul o peço unitario da lata de tinta ? '))
+            print ('O valor total para compar as ' , quantilata , 'latas, é de' ,quantilata*precolata , 'reais.')
+        else:
+            print('Você vai precisar de', quantilata, 'latas de tinta')
+#Triangulo
+elif tipo =='3':
+    base = float(input('Digite o valor da base ' ))
+    altura = float(input('Digite o valor da altura'))
+    resultadot = ((base*altura)/2)
+    print('A area total é', resultadot)
+    if tipo2 == '1':
+        caixa = float(input('Qauntos metros quadrados vem na caixa de pisos desejada ? '))
+        quanticaixa = resultadot // caixa
+        if resultadot % caixa > 0:
+            quanticaixa = quanticaixa + 1
+            print ('Você vai precisar de' , quanticaixa , 'caixas de piso.')
+            precocaixa = float(input('Qaul o peço unitario da caixa de pisos ? '))
+            print ('O valor total para compar as ' , quanticaixa , 'caixas, é de' ,quanticaixa*precocaixa , 'reais.')
+        else:
+            print ('Você vai precisar de', quanticaixa, 'caixas de piso')
+    if tipo2 == '2':
+        lata = float(input('Qauntos metros quadrados a tinta desejada cobre ? '))
+        quantilata = resultadot // lata
+        if resultadot % lata > 0:
+            quantilata = quantilata + 1
+            print ('Você vai precisar de' , quantilata , 'latas de tinta.')
+            precolata = float(input('Qaul o peço unitario da lata de tinta ? '))
+            print ('O valor total para compar as ' , quantilata , 'latas, é de' ,quantilata*precolata , 'reais.')
+        else:
+            print ('Você vai precisar de', quantilata, 'latas de tinta')
+
+else:
+    print('Operação incorreta! ')
+
