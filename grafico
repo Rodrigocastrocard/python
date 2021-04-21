@@ -1,0 +1,47 @@
+# Esse teste examina as notas de um aluno e cria um grafico da media
+
+print('Esse programa recebe a informacao das notas de um aluno e calcula a media\n Sao informadas 4 notas bimestrais: ')
+
+# Recebe os valores
+nota1 = float(input('Digite aqui a nota do primeiro bimestre '))
+nota2 = float(input('Digite aqui a nota do segundo bimestre '))
+nota3 = float(input('Digite aqui a nota do terceiro bimestre '))
+nota4 = float(input('Digite aqui a nota do quarto bimestre '))
+
+# Calcula a media
+media = ((nota1+nota2+nota3+nota4)/4)
+
+# Mostra a media com 2 casas decimais
+print (f'A media desse aluno e {media:.2f}')
+
+
+# Criando grafico
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4]
+y = [nota1,nota2,nota3,nota4]
+
+plt.title("Grafico de Notas")
+plt.xlabel('Bimestre')
+plt.ylabel('Nota')
+
+# Selecao do tipo de grafico - plt.plot(x,y) para linha e plt.bar(x,y) para barras
+tipografico = input('Qual tipo de grafico voce quer ?\n 1=Barras\n 2=Linhas\n')
+if tipografico == '1':
+    plt.bar(x,y)
+    plt.show()
+if tipografico == '2':
+    plt.plot(x,y)
+    plt.show()
+else:
+    print ('Opcao invalida')
+
+# Salvar grafico
+salva = input('deseja salvar o grafico ? (S ou N) ')
+
+if salva == ('S'):
+    plt.savefig('grafico1.png', dpi=300)
+    print('O grafico foi salvo ')
+else:
+    salva == ('N')
+    print('O grafico nao foi salvo')
